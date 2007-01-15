@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+ ***** BEGIN LICENSE BLOCK *****
+  Copyright 2004 J. Carlos Navea
+  loconet@gmail.com   
+  ***** END LICENSE BLOCK ***** */
+-->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://gsuggest/content/gsuggest.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
+
+<dialog buttons="accept"
+        id="gsuggest-options-dialog"
+        title="GSuggest Options"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script src="chrome://gsuggest/content/gsuggest.js"/>
+    <vbox>
+        <hbox>
+            <vbox>
+                <hbox>
+                    <description value="GSuggest" class="name"/>
+                    <description class="name">0.1.2</description>
+                </hbox>
+                <description value="Author" class="title"/>
+                <description>J. Carlos Navea &lt;loconet@gmail.com&gt;</description>
+                <description value="Contributor" class="title"/>
+                <description>SHIMODA Hiroshi &lt;piro@p.club.ne.jp&gt;</description>
+            </vbox>
+            <spacer flex="1"/>
+        </hbox>
+        <description value="Website" class="title"/>
+        <description>http://www.loconet.ca/</description>
+    </vbox>
+
+</dialog>

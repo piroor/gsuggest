@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+ ***** BEGIN LICENSE BLOCK *****
+  Copyright 2004 J. Carlos Navea
+  loconet@gmail.com   
+  ***** END LICENSE BLOCK ***** */
+-->
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+<?xml-stylesheet href="chrome://gsuggest/content/gsuggest.css" type="text/css"?>
+
+<overlay id="gsuggest_search-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script src="chrome://gsuggest/content/gsuggest.js"/>
+
+<toolbaritem id="search-container">
+	<popup id="gsuggest_suggestListPopup"
+			ignorekeys="true"
+			oncommand="GSuggest.searchQuery(event.target);"
+			onpopupshowing="GSuggest.onPopupShowing(event)"
+			onpopuphiding="GSuggest.onPopupHiding(event)"/>
+</toolbaritem>
+
+</overlay>
+

@@ -1,0 +1,3 @@
+
+overlay	chrome://browser/content/browser.xul	chrome://gsuggest/content/searchBoxOverlay.xul
+content	gsuggest	jar:chrome/gsuggest.jar!/content/gsuggest/

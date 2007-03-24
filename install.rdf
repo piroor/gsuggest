@@ -7,7 +7,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 		<em:id>{26bf773c-bfa8-47a2-b2b4-5d3286c77684}</em:id>
 		<em:name>GSuggest [Modified]</em:name>
-		<em:version>0.1.6</em:version>
+		<em:version>0.1.7</em:version>
 		<em:description>Adds search query suggestions to the GoogleSuggest search engine.</em:description>
 		<em:creator>J. Carlos Navea</em:creator>
 		<em:contributor>SHIMODA Hiroshi</em:contributor>

@@ -35,6 +35,9 @@ var GSuggest = {
 		search.mTextbox.addEventListener('keypress', this.onKeyPress, true);
 		search.mTextbox.addEventListener('blur', this.onBlur, false);
 
+		textbox.addEventListener('focus', this.onTextboxFocused, true);
+		window.addEventListener('focus', this.onSomethingFocused, true);
+
 		document.getAnonymousElementByAttribute(search, 'anonid', 'searchbar-popup').addEventListener('command', this.onCommand, true);
 
 		this.initSuggest();
@@ -51,6 +54,9 @@ var GSuggest = {
 		search.mTextbox.removeEventListener('keyup', this.onKeyUp, true);
 		search.mTextbox.removeEventListener('keypress', this.onKeyPress, true);
 		search.mTextbox.removeEventListener('blur', this.onBlur, false);
+
+		textbox.removeEventListener('focus', this.onTextboxFocused, true);
+		window.removeEventListener('focus', this.onSomethingFocused, true);
 
 		document.getAnonymousElementByAttribute(search, 'anonid', 'searchbar-popup').removeEventListener('command', this.onCommand, true);
 	},
@@ -72,6 +78,24 @@ var GSuggest = {
 	{
 		GSuggest.popup.hidePopup();
 		GSuggest.popup.shown = false;
+	},
+ 
+	onTextboxFocused : function(aEvent) 
+	{
+		GSuggest.textBoxFocused = true;
+	},
+	textBoxFocused : false,
+ 
+	onSomethingFocused : function(aEvent) 
+	{
+		window.setTimeout(function() {
+			if (!GSuggest.textBoxFocused) {
+				GSuggest.popup.hidePopup();
+				GSuggest.popup.shown = false;
+			}
+
+			GSuggest.textBoxFocused = false;
+		}, 0);
 	},
  
 	onCommand : function(aEvent) 

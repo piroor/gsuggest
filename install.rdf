@@ -1,34 +1,32 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="{26bf773c-bfa8-47a2-b2b4-5d3286c77684}"
+                   em:name="GSuggest [Modified]"
+                   em:version="0.1.7"
+                   em:creator="J. Carlos Navea"
+                   em:description="Adds search query suggestions to the GoogleSuggest search engine."
+                   em:homepageURL="http://piro.sakura.ne.jp/"
+                   em:iconURL="chrome://gsuggest/content/logo.png"
+                   em:optionsURL="">
+	<em:contributor>SHIMODA Hiroshi</em:contributor>
 
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
-	<Description about="urn:mozilla:install-manifest">
+    <em:updateURL>https://pub.cozmixng.org/~piro/xul/xul.rdf.en</em:updateURL>
 
-		<em:id>{26bf773c-bfa8-47a2-b2b4-5d3286c77684}</em:id>
-		<em:name>GSuggest [Modified]</em:name>
-		<em:version>0.1.7</em:version>
-		<em:description>Adds search query suggestions to the GoogleSuggest search engine.</em:description>
-		<em:creator>J. Carlos Navea</em:creator>
-		<em:contributor>SHIMODA Hiroshi</em:contributor>
-		<em:homepageURL>http://piro.sakura.ne.jp/</em:homepageURL>
-		<em:iconURL>chrome://gsuggest/content/logo.png</em:iconURL>
-		<em:aboutURL>chrome://gsuggest/content/about.xul</em:aboutURL>
-		<em:updateURL>https://pub.cozmixng.org/~piro/xul/xul.rdf.en</em:updateURL>
-		<em:file>
-			<Description about="urn:mozilla:extension:file:gsuggest.jar">
-				<em:package>content/gsuggest/</em:package>
-			</Description>
-		</em:file>
 
-		<em:targetApplication>
-			<Description>
-				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-				<em:minVersion>1.0</em:minVersion>
-				<em:maxVersion>1.5.0.*</em:maxVersion>
-			</Description>
-		</em:targetApplication>
-
-	</Description>
-
-</RDF>
+    <em:targetApplication>
+      <!-- Firefox -->
+      <RDF:Description em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                       em:minVersion="1.0"
+                       em:maxVersion="1.5.0.*" />
+    </em:targetApplication>
+	<em:file>
+		<RDF:Description RDF:about="urn:mozilla:extension:file:gsuggest.jar">
+			<em:package>content/gsuggest/</em:package>
+		</RDF:Description>
+	</em:file>
+  </RDF:Description>
+</RDF:RDF>
